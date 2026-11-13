@@ -1,0 +1,29 @@
+package views
+
+import "TPEspecialParte6/internal/db/sqlc"
+import "fmt"
+
+templ MovieList(movies []db.Movie) {
+	<div id="movies-list">
+		<h2>Lista de Películas</h2>
+		<ul id="movies-ul">
+			if len(movies) == 0 {
+				<li>No hay películas registradas.</li>
+			} else {
+			    for _, movie := range movies {
+				    <li>
+					    <span>{ movie.Name }</span>
+                        <button 
+                                hx-delete={ fmt.Sprintf("/movies/%d", movie.ID) }
+                                hx-target="closest li"
+                                hx-swap="outerHTML"
+                                hx-confirm="¿Estás seguro de que deseas eliminar esta película?"
+                                style="background-color: red; border-color: red; color: white; padding: 5px 10px; font-size: 0.8rem;">
+                                Eliminar
+                        </button>
+				    </li>
+			    }
+            }
+		</ul>
+	</div>
+}

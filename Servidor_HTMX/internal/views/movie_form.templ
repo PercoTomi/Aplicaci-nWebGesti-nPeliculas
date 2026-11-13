@@ -1,0 +1,38 @@
+package views
+
+templ MovieForm() {
+    <aside id="form-agregar">
+        <h2>Agregar Película</h2>
+        
+        <form hx-post="/movies" 
+              hx-target="#movies-list" 
+              hx-swap="outerHTML">
+              
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required/>
+            </div>
+			<div class="form-group">
+				<label for="descripcion">Descripción:</label>
+				<textarea id="descripcion" name="descripcion" required></textarea>
+			</div>
+			<div class="form-group">
+				<label for="fecha">Fecha de Estreno:</label>
+				<input type="date" id="fecha" name="fecha" required/>
+			</div>
+			<div class="form-group">
+				<label for="duracion">Duración (minutos):</label>
+				<input type="number" id="duracion" name="duracion" min="1" required/>
+			</div>
+			<div class="form-group">
+				<label for="genero">Género:</label>
+				<input type="text" id="genero" name="genero" required/>
+			</div>
+			<div class="form-group">
+				<label for="director">Director:</label>
+				<input type="text" id="director" name="director" required/>
+			</div>
+            <button type="submit">Agregar Película</button>
+        </form>
+    </aside>
+}

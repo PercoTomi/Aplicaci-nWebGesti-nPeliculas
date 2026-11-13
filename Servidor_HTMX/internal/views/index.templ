@@ -1,0 +1,10 @@
+package views
+
+import "TPEspecialParte6/internal/db/sqlc"
+
+templ IndexPage(title string, movies []db.Movie) {
+	@Layout(title) {
+		@MovieForm()
+		@MovieList(movies)
+	}
+}

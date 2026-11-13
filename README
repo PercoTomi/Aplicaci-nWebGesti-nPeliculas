@@ -1,0 +1,24 @@
+
+---Documento de Trabajo Practico Programacion Web 2025---
+
+--Integrantes: Axel Kjolhede, Agustín Sequeira, Tomás Perco--
+
+# Requisitos
+- Go 1.20 o superior
+- sqlc instalado
+- Docker y Docker compose instalado
+
+# Descripcion
+
+En esta etapa, el objetivo es evolucionar la aplicación anterior integrando la librería HTMX. Esto permite transformar la experiencia de usuario en una interfaz fluida y dinámica, eliminando las recargas de página completas. Ahora las interacciones (como crear o eliminar entidades) se manejan mediante peticiones AJAX parciales gestionadas por HTMX. El servidor Go sigue utilizando SSR, pero en lugar de devolver páginas enteras tras una acción, responde con fragmentos de HTML que actualizan únicamente las partes necesarias del DOM (como la lista de películas) en tiempo real. Esto logra una mejora visual para los usuarios, sin necesidad de escribir lógica compleja en JavaScript.
+
+---
+
+# Ejecución del proyecto
+
+1. Descomprimir el .zip "TPEspecialUltimaParte".
+2. Abrir la terminal dentro de la carpeta "Servidor_HTMX".
+3. En la terminal ejecutar el comando "make dev".
+4. Para entrar a la página, ingresar a "http://localhost:8080/".
+5. Rellenar los campos solicitados en la pagina y agregar una pelicula (en el final de pagina se podra ver el nombre de la pelicula agregada con su respectivo botón para eliminarla).
+6. Al terminar, detener la ejecución del servidor (CTRL+C) y ejecutar el comando "make down" para liberar los recursos.
