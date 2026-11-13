@@ -16,9 +16,8 @@ En esta etapa, el objetivo es evolucionar la aplicación anterior integrando la 
 
 # Ejecución del proyecto
 
-1. Descomprimir el .zip "TPEspecialUltimaParte".
-2. Abrir la terminal dentro de la carpeta "Servidor_HTMX".
-3. En la terminal ejecutar el comando "make dev".
-4. Para entrar a la página, ingresar a "http://localhost:8080/".
-5. Rellenar los campos solicitados en la pagina y agregar una pelicula (en el final de pagina se podra ver el nombre de la pelicula agregada con su respectivo botón para eliminarla).
-6. Al terminar, detener la ejecución del servidor (CTRL+C) y ejecutar el comando "make down" para liberar los recursos.
+1. Abrir la terminal dentro de la carpeta "Servidor_HTMX".
+2. En la terminal ejecutar el comando "make dev".
+3. Para entrar a la página, ingresar a "http://localhost:8080/".
+4. Rellenar los campos solicitados en la pagina y agregar una pelicula (en el final de pagina se podra ver el nombre de la pelicula agregada con su respectivo botón para eliminarla).
+5. Al terminar, detener la ejecución del servidor (CTRL+C) y ejecutar el comando "make down" para liberar los recursos.
